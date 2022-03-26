@@ -21,11 +21,11 @@ Parameters:
       Description: web server c2 KeyPair Name
       Type: String
 Resources:
-  UdacityS3permissonEC2:
+  UdacityS3RoleEC2:
     Type: AWS::IAM::Role
     Properties:
       RoleName: 
-        !Sub ${EnvironmentName}-Role
+        !Sub ${EnvironmentName}-Role-test
       AssumeRolePolicyDocument:
         Version: "2012-10-17"
         Statement:
@@ -49,13 +49,13 @@ Resources:
           - arn:aws:s3:::udacityudagram-346117284268
           - arn:aws:s3:::udacityudagram-346117284268/*
       Roles:
-      - Ref: UdacityS3ReadOnlyEC2
+      - Ref: UdacityS3RoleEC2
   ProfileWithRolesForOurApp:
     Type: AWS::IAM::InstanceProfile
-    DependsOn: UdacityS3ReadOnlyEC2
+    DependsOn: UdacityS3RoleEC2
     Properties: 
       Roles:
-        - Ref: UdacityS3ReadOnlyEC2
+        - Ref: UdacityS3RoleEC2
   LBSecGroup:
     Type: AWS::EC2::SecurityGroup
     Properties:

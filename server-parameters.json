@@ -1,0 +1,18 @@
+[
+	{
+		"ParameterKey": "EnvironmentName",
+		"ParameterValue": "UdacityProject"
+	},{
+		"ParameterKey": "InstanceType",
+		"ParameterValue": "t3.small"
+	},{
+		"ParameterKey": "AMIId",
+		"ParameterValue": "ami-0fb653ca2d3203ac1"
+	},{
+		"ParameterKey": "KeyPair",
+		"ParameterValue": "udacity_key_pair"
+	},{
+		"ParameterKey": "BaisonKeyPair",
+		"ParameterValue": "baison"
+	}
+]

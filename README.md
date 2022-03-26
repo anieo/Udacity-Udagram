@@ -10,22 +10,22 @@ In this project, you’ll deploy web servers for a highly available web app usin
 
 ### Deploy
 
-```bash
-create network network.yml network-parameters.json
-create server server.yml server-parameters.json
+```shell
+$ ./create network network.yml network-parameters.json
+$ ./create server server.yml server-parameters.json
 ```
 
 ### Update
 
-```bash
-update network network.yml network-parameters.json
-update server server.yml server-parameters.json
+```shell
+$ ./update network network.yml network-parameters.json
+$ ./update server server.yml server-parameters.json
 ```
 
 ### Delete
 
-```bash
-delete network network.yml network-parameters.json
-delete server server.yml server-parameters.json
+```shell
+$ ./delete network network.yml network-parameters.json
+$ ./delete server server.yml server-parameters.json
 ```
 
